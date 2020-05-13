@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  leveldbraft:
+    image: 00arthur00/leveldbraft
+    ports:
+      - 8901:8901
+      - 8902:8902
