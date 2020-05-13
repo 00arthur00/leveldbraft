@@ -1,6 +1,10 @@
 version: '3.4'
 
 services:
+  swagger-editor:
+    image: "swaggerapi/swagger-editor"
+    ports:
+    - "8080:8080"
   leveldbraft:
     image: 00arthur00/leveldbraft
     ports:

@@ -46,6 +46,7 @@ func NewWebService(node Node, log hclog.Logger) *restful.WebService {
 	ws.Route(ws.DELETE("/kv/{key}").To(r.delete).
 		Doc("delete key").
 		Metadata(restfulspec.KeyOpenAPITags, tags).
+		Param(ws.PathParameter("key", "key").DataType("string")).
 		Writes(Msg{}).
 		Returns(http.StatusOK, "ok", nil).
 		Returns(http.StatusBadRequest, "bad request", nil).
